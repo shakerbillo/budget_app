@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Budget from "./components/Budget";
+import Remaining from "./components/Remaining";
+import ExpenseTotal from "./components/ExpenseTotal";
 
-function App() {
+import ExpenseList from "./components/ExpenseList";
+import AllocationForm from "./components/AllocationForm";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className='container'>
+                <h1 className='mt-3'>Company's Budget Allocation</h1>
+                    <div className='row mt-3'>
+                    <div className='col-sm'>
+                        <Budget />
+                    </div>
+                    <div className='col-sm'>
+                        <Remaining />
+                    </div>
+                    <div className='col-sm'>
+                        <ExpenseTotal />
+                    </div>
+                   
+
+                </div>
+                <h3 className='mt-3'>Allocation</h3>
+                <div className='row '>
+                    <div className='col-sm'>
+                        <ExpenseList />
+                    </div>
+                </div>
+                <h3 className='mt-3'>Change allocation</h3>
+                <div className='row mt-3'>
+                    <div className='col-sm'>
+                        <AllocationForm/>
+                    </div>
+                </div>
+            </div>
+    </>
   );
 }
 
