@@ -1,0 +1,6 @@
+/* Custom CSS for green color */
+.select-green {
+    color: #070707; /* text color */
+    border-radius: 5px;
+    background-color: #D1E7DD; /* background color */
+  }
